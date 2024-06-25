@@ -1,0 +1,24 @@
+
+let colors = ['#FF0000', '#00FF00', '#0000FF']; // Array de cores
+let currentColor = 0; // Índice da cor atual
+
+function setup() {
+  createCanvas(400, 200);
+  textSize(60);
+  textAlign(CENTER);
+}
+
+function draw() {
+  background(220);
+  
+  // Define a cor atual
+  fill(colors[currentColor]);
+  
+  // Desenha a palavra "olá" no centro do canvas
+  text("olá", width/2, height/2);
+}
+
+function mouseClicked() {
+  // Avança para a próxima cor quando o mouse é clicado
+  currentColor = (currentColor + 1) % colors.length;
+}
